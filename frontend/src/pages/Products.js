@@ -64,22 +64,22 @@ function Products({
     switch (option) {
       case "price-asc":
         setFilteredProducts(
-          [...filteredProducts].sort((a, b) => a.price - b.price)
+          [...unsortedProducts].sort((a, b) => a.price - b.price)
         );
         break;
       case "price-desc":
         setFilteredProducts(
-          [...filteredProducts].sort((a, b) => b.price - a.price)
+          [...unsortedProducts].sort((a, b) => b.price - a.price)
         );
         break;
       case "rating-asc":
         setFilteredProducts(
-          [...filteredProducts].sort((a, b) => a.rating - b.rating)
+          [...unsortedProducts].sort((a, b) => a.rating - b.rating)
         );
         break;
       case "rating-desc":
         setFilteredProducts(
-          [...filteredProducts].sort((a, b) => b.rating - a.rating)
+          [...unsortedProducts].sort((a, b) => b.rating - a.rating)
         );
         break;
       default:
