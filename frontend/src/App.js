@@ -189,13 +189,104 @@ const App = () => {
           }
         />
         <Route
-          path="products/vehicles-remote-controls"
+          path="products/lego"
           element={
             <Products
               filter={{
-                categories: ["vehicles and remote controls"],
+                categories: [],
                 ages: [],
-                brands: [],
+                brands: ["lego"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/barbie"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["barbie"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/funko"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["funko"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/play-doh"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["play-doh"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/marvel"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["marvel"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/disney"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["disney"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/hot-wheels"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["hot wheels"],
+                prices: [],
+              }}
+            />
+          }
+        />
+        <Route
+          path="products/others"
+          element={
+            <Products
+              filter={{
+                categories: [],
+                ages: [],
+                brands: ["others"],
                 prices: [],
               }}
             />

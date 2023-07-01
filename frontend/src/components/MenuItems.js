@@ -89,7 +89,9 @@ const MenuItems = ({ items, depthLevel }) => {
           />
         </>
       ) : (
-        <Link to={items.url}>{items.title}</Link>
+        <Link reloadDocument to={items.url}>
+          {items.title}
+        </Link>
       )}
     </li>
   );

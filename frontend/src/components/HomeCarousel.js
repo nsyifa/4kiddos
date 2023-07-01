@@ -2,6 +2,7 @@ import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import CarouselCard from "./ui/CarouselCard";
 import CarouselCardBrand from "./ui/CarouselCardBrand";
+import { Link } from "react-router-dom";
 
 const HomeCarousel = ({ data, color }) => {
   const cardNumbers = data.title === "by character" ? 5 : 4;
@@ -9,12 +10,14 @@ const HomeCarousel = ({ data, color }) => {
   return (
     <div className="carousel-container">
       {(data.title == "by character") | (data.title == "by brand") ? (
-        <button
-          className="carousel-button"
+        <div
+          className="carousel-button-container"
           style={{ backgroundColor: data.color }}
         >
-          {data.button}
-        </button>
+          <Link to="products" style={{ textDecoration: "none" }}>
+            <button className="carousel-button">{data.button}</button>
+          </Link>
+        </div>
       ) : (
         <span></span>
       )}
@@ -32,20 +35,24 @@ const HomeCarousel = ({ data, color }) => {
       >
         {data.title === "by brand"
           ? data.sections.map((card, index) => (
-              <CarouselCardBrand
-                img={card.image}
-                title={card.desc}
-                color="green"
-                key={index}
-              />
+              <Link to={card.url} style={{ textDecoration: "none" }}>
+                <CarouselCardBrand
+                  img={card.image}
+                  title={card.desc}
+                  color="green"
+                  key={index}
+                />
+              </Link>
             ))
           : data.sections.map((card, index) => (
-              <CarouselCard
-                img={card.image}
-                title={card.desc}
-                color={color}
-                key={index}
-              />
+              <Link to={card.url} style={{ textDecoration: "none" }}>
+                <CarouselCard
+                  img={card.image}
+                  title={card.desc}
+                  color={color}
+                  key={index}
+                />
+              </Link>
             ))}
       </Carousel>
     </div>
